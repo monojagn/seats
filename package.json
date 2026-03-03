@@ -1,0 +1,11 @@
+{
+	"dependencies": {
+		"@effect/platform": "^0.94.5",
+		"@effect/platform-node": "^0.104.1",
+		"effect": "^3.19.19",
+		"node": "^25.7.0"
+	},
+	"devDependencies": {
+		"@types/node": "^25.3.3"
+	}
+}

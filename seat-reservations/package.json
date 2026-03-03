@@ -1,0 +1,23 @@
+{
+  "name": "reservations",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start:reservations": "node --experimental-strip-types --env-file-if-exists=packages/reservations/.env ./packages/reservations/main.ts",
+    "start:seats": "node --experimental-strip-types --env-file-if-exists=packages/seats/.env ./packages/seats/main.ts",
+    "start:users": "node --experimental-strip-types --env-file-if-exists=packages/users/.env ./packages/users/main.ts",
+    "start": "concurrently 'npm run start:users' 'npm run start:seats' 'npm run start:reservations'"
+  },
+  "dependencies": {
+    "@effect/platform": "^0.94.2",
+    "@effect/platform-node": "^0.104.1",
+    "effect": "^3.19.15",
+    "typescript": "~5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.21.0"
+  }
+}
